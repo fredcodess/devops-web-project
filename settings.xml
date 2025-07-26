@@ -1,0 +1,31 @@
+<settings>
+<servers>
+  <server>
+    <id>fred-devops-cicd</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<profiles>
+  <profile>
+    <id>fred-devops-cicd</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>fred-devops-cicd</id>
+        <url>https://fred-930579048377.d.codeartifact.us-west-2.amazonaws.com/maven/devops-cicd/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+<mirrors>
+  <mirror>
+    <id>fred-devops-cicd</id>
+    <name>fred-devops-cicd</name>
+    <url>https://fred-930579048377.d.codeartifact.us-west-2.amazonaws.com/maven/devops-cicd/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
